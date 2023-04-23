@@ -1,0 +1,38 @@
+{{> header}}
+<main class="container">
+  <h1>Manage Goals</h1>
+  <p>Set and manage your personal goals related to nutrition, fitness, and a healthy lifestyle.</p>
+
+  <section>
+    <h2>Add a Goal</h2>
+    <form action="/users/goals/add" method="POST">
+      <div>
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+          <option value="">Select a category</option>
+          <option value="nutrition">Nutrition</option>
+          <option value="fitness">Fitness</option>
+          <option value="healthy_lifestyle">Healthy Lifestyle</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="description">Goal Description:</label>
+        <input type="text" id="description" name="description" required>
+      </div>
+
+      <div>
+        <label for="dueDate">Due Date:</label>
+        <input type="date" id="dueDate" name="dueDate" required>
+      </div>
+
+      <button type="submit">Add Goal</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Current Goals</h2>
+    <!-- Display user's current goals and related controls (e.g., edit, delete) here -->
+  </section>
+</main>
+{{> footer}}
